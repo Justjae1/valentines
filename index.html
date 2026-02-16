@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Will you be my Valentine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        @import url(style.css);
+    </style>
+
+
+</head>
+<h1>Will you be my Valentine ??</h1>
+
+<div class="btn-container">
+    <div class="yes-wrapper">
+        <button class="yes-btn">YES</button>
+    </div>
+
+    <button class="no-btn">NO</button>
+</div>
+
+    <img id="bow-img" src="無謂君 Bow Down Sticker by nothingwejun.gif">
+
+    <script>
+        const yesBtn = document.querySelector('.yes-btn');
+        const noBtn = document.querySelector('.no-btn');
+
+        let scale = 1;
+
+
+        noBtn.addEventListener('click', () => {
+            scale += 0.2;
+            yesBtn.style.transform = `scale(${scale})`;
+        });
+
+
+        yesBtn.addEventListener('click', () => {
+            window.location.href = "yes.html";
+        });
+    </script>
+
+</body>
+
+</html>

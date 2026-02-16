@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>She Said Yes!</title>
+    <style>
+        @import url(style.css);
+    </style>
+</head>
+
+<body>
+    <audio id="loveAudio" src="music.mp3" autoplay></audio>
+    <h1>YAYYY ❤️❤️❤️</h1>
+
+    <div class="carousel">
+        <img src="imgs/image1.jpg" class="active">
+        <img src="imgs/image2.jpg">
+        <img src="imgs/image3.jpg">
+        <img src="imgs/image4.jpg">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        let index = 0;
+
+        setInterval(() => {
+
+          images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }, 3000);
+    </script>
+
+    <h1>I LOVE YOU MAMI!!</h1>
+</body>
+
+</html>

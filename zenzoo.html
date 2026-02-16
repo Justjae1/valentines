@@ -1,0 +1,200 @@
+<section class="timeline-section">
+
+  <h2 class="timeline-title">Nuestra Historia</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="timeline-card">
+        <img src="https://gravitea.es/wp-content/uploads/2026/01/image-6.png" alt="2022">
+      </div>
+ <h2 class="timeline-caption1">Nacimos en 2022</h2>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-card">
+        <img src="https://gravitea.es/wp-content/uploads/2026/01/image-3.png" alt="2023">
+      </div>
+<h2 class="timeline-caption2">Participamos de <br>HIP en los años 2023 y 2024</h2>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-card">
+        <img src="https://gravitea.es/wp-content/uploads/2026/01/image-5.png" alt="2023">
+      </div>
+<h2 class="timeline-caption1">Participamos en Alimentaria</h2>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-card">
+        <img src="https://gravitea.es/wp-content/uploads/2026/01/image-4.png" alt="2024">
+      </div>
+<h2 class="timeline-caption2">Operamos en todo Europa</h2>
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+.timeline-caption1 {
+  text-align: center; /* center under the image */
+  margin-top: 1rem;   /* space from the image */
+  font-size: 1.2rem;  /* adjust size as needed */
+  font-weight: 600;
+position: relative; 
+  left: -10rem;
+}
+.timeline-caption2 {
+  text-align: center; /* center under the image */
+  margin-top: 1rem;   /* space from the image */
+  font-size: 1.2rem;  /* adjust size as needed */
+  font-weight: 600;
+  position:relative;
+right: -10rem;
+}
+
+.timeline-section {
+  width: 100%;
+  padding: 5rem 0;
+  font-family: 'Mulish', sans-serif;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Title */
+.timeline-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  width: 100%; /* full width */
+  max-width: 100%; /* override fixed max-width */
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Center line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: #3C3C3B;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline items */
+.timeline-item {
+  width: 48%;
+  position: relative;
+  margin-bottom: 6rem;
+  box-sizing: border-box;
+}
+
+/* Dots */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 3px solid #3C3C3B;
+  border-radius: 50%;
+  top: 10rem;
+  z-index: 2;
+}
+
+/* Connector branches */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 10.4rem;
+  width: 21px;
+  height: 3px;
+  background: #3C3C3B;
+}
+
+/* Left side */
+.timeline-item.left {
+  left: -1%; /* shift left items slightly more left */
+  text-align: center;
+}
+.timeline-item.left::before {
+  right: -8px;
+}
+.timeline-item.left::after {
+  right: -22px;
+}
+.timeline-item.left .timeline-card {
+  transform: translateX(-20px); /* slide left image further left */
+}
+
+/* Right side */
+.timeline-item.right {
+  left: 53%; /* shift right items slightly more right */
+  text-align: center;
+}
+.timeline-item.right::before {
+  left: -4px;
+}
+.timeline-item.right::after {
+  left: -22px;
+}
+.timeline-item.right .timeline-card {
+  transform: translateX(20px); /* slide right image further right */
+}
+
+/* Card — controls size safely */
+.timeline-card {
+  width: 380px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 4rem; 
+}
+
+/* Image fills card */
+.timeline-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 3rem;
+  }
+
+  .timeline-card {
+    width: 100%;
+    transform: none; /* remove shift on mobile */
+  }
+
+  .timeline-item::before {
+    left: 12px;
+  }
+
+  .timeline-item::after {
+    left: 28px;
+    width: 30px;
+  }
+}
+
+</style>
